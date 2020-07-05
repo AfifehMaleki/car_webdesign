@@ -1,0 +1,112 @@
+
+body{
+  margin: 0;
+  padding: 0;
+
+  font-family: sans-serif;
+  /* overflow: hidden; */
+  background-color: #e6e6e6;
+
+}
+
+
+
+/--------------------------/
+.containers{
+  width: 1000px ;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards{
+  position: relative;
+  /* left: -6%; */
+  width: 300px;
+  height: 370px;
+  transition: 0.3s ease-out;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+  margin-bottom: 30px;
+}
+
+.cards .imgbox{
+   position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+
+.cards .imgbox img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  display: block;
+  transition: 0.5s;
+  /* background-size: cover; */
+}
+
+.cards .content{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  background: #e6e6e6;
+  transition:  0.5s ;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.cards:hover .content{
+  width: 100%;
+  height: 50%;
+  left: 0;
+  bottom: 0;
+}
+
+/* limited character display */
+ .content .details p{
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+
+.cards .content .details{
+  margin: 10px 0 0;
+  transform: translateY(1em);
+  line-height: 1.3em;
+  transition: 0.3s;
+  text-align: justify;
+  opacity: 0;
+}
+
+.cards:hover .content .details{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.details .view-btn{
+  display: block;
+  margin: 20px auto;
+}
+
+.cards:hover{
+  /* transform: scale(1.02); */
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.6  );
+}
+/* main */
+.main{
+  width: 1000px;
+  height:auto;
+  background: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  margin: 3rem 2rem;
+}
