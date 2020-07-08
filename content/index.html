@@ -14,6 +14,7 @@
   <body>
 
     <div class="main">
+
       <div class="containers" style="width: 1000px ;
       margin: 4em auto;
       display: flex;
@@ -138,8 +139,145 @@
           </div>
         </div>
 
+        <div class="cards">
+           <div class="imgbox">
+             <img src="car.jpg" alt="car">
+           </div>
+           <div class="content">
+             <p>model : <span>persia</span></p>
+             <p>color : <span>white</span></p>
+             <div class="details"><p> more details : rang khorde</p>
+               <button class="btn btn-danger view-btn" type="submit" name="button"> view </button>
+             </div>
+           </div>
+         </div>
+
+         <div class="cards">
+            <div class="imgbox">
+              <img src="car.jpg" alt="car">
+            </div>
+            <div class="content">
+              <p>model : <span>persia</span></p>
+              <p>color : <span>white</span></p>
+              <div class="details"><p> more details : rang khorde</p>
+                <button class="btn btn-danger view-btn" type="submit" name="button"> view </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="cards">
+             <div class="imgbox">
+               <img src="car.jpg" alt="car">
+             </div>
+             <div class="content">
+               <p>model : <span>persia</span></p>
+               <p>color : <span>white</span></p>
+               <div class="details"><p> more details : rang khorde</p>
+                 <button class="btn btn-danger view-btn" type="submit" name="button"> view </button>
+               </div>
+             </div>
+           </div>
+
+           <div class="cards">
+              <div class="imgbox">
+                <img src="car.jpg" alt="car">
+              </div>
+              <div class="content">
+                <p>model : <span>persia</span></p>
+                <p>color : <span>white</span></p>
+                <div class="details"><p> more details : rang khorde</p>
+                  <button class="btn btn-danger view-btn" type="submit" name="button"> view </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="cards">
+               <div class="imgbox">
+                 <img src="car.jpg" alt="car">
+               </div>
+               <div class="content">
+                 <p>model : <span>persia</span></p>
+                 <p>color : <span>white</span></p>
+                 <div class="details"><p> more details : rang khorde</p>
+                   <button class="btn btn-danger view-btn" type="submit" name="button"> view </button>
+                 </div>
+               </div>
+             </div>
+
+             <div class="cards">
+                <div class="imgbox">
+                  <img src="car.jpg" alt="car">
+                </div>
+                <div class="content">
+                  <p>model : <span>persia</span></p>
+                  <p>color : <span>white</span></p>
+                  <div class="details"><p> more details : rang khorde</p>
+                    <button class="btn btn-danger view-btn" type="submit" name="button"> view </button>
+                  </div>
+                </div>
+              </div>
+    <!------ PAGINATION ----->
+          <div class="page-div">
+
+            <ul class="pages">
+              <li class="first disable"> <a href="#prev">First</a></li>
+              <li class="prev disable"> <a href="#prev">&laquo;<span class="sr-only"> Previous </span></a></li>
+              <li class="pages-item active"> <a href="#p1">1</a></li>
+              <li class="pages-item"> <a href="#p2">2</a></li>
+              <li class="pages-item"> <a href="#p3">3</a></li>
+              <li class="pages-item"> <a href="#p4">4</a></li>
+              <li class="next"> <a href="#prev">&raquo;<span class="sr-only">Next </span></a></li>
+              <li class="last"> <a href="#prev">Last</a></li>
+            </ul>
+
+          </div>
+
       </div>
 </div>
 
+  <!-- Footer -->
+  <div class="footer-div">
+
+    <div class="footer-menu-one">
+      <ul>
+        <li> <a href="#">about</a> </li>
+        <li> <a href="#">contact us</a> </li>
+        <li> <a href="#">sign in/up</a> </li>
+        <li> <a href="#">advertisment</a> </li>
+        <li> <a href="#">home</a> </li>
+      </ul>
+    </div>
+
+    <div class="footer-menu-two">
+      <ul>
+        <li> <a href="#">Terms of Use .</a> </li>
+        <li> <a href="#">Privacy</a> </li>
+      </ul>
+    </div>
+
+    <!-- Copyright -->
+     <div class="footer-copyright text-center py-3">© 2020 Copyright:
+       <a class="footer-web" href="https://google.com/"> google.com</a>
+     </div>
+     <!-- Copyright -->
+
+  </div>
+
+  <!-- Footer -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
   </body>
+<script>
+  $(".pages .pages-item a").not(".disable a").on("click",function() {
+      if(!$(this).parent().hasClass("active")){
+        $(".pages .pages-item.active").removeClass("active");
+        $(this).parent().addClass("active");
+      }
+  });
+</script>
+
+
+
 </html>

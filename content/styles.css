@@ -6,14 +6,15 @@ body{
   font-family: sans-serif;
   /* overflow: hidden; */
   background-color: #e6e6e6;
-
 }
 
-
+a:hover{
+  text-decoration: none;
+}
 
 /--------------------------/
 .containers{
-  width: 1000px ;
+  width: 1000px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -22,6 +23,8 @@ body{
 .cards{
   position: relative;
   /* left: -6%; */
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   width: 300px;
   height: 370px;
   transition: 0.3s ease-out;
@@ -39,6 +42,8 @@ body{
 
 .cards .imgbox img{
   position: absolute;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,17 +101,124 @@ body{
 
 .cards:hover{
   /* transform: scale(1.02); */
-  box-shadow: 0 0 2em rgba(0, 0, 0, 0.6  );
+  box-shadow: 0 0 2em rgba(0, 0, 0, 0.8 );
 }
 /* main */
 .main{
-  width: 1000px;
+  width: 70%;
   height:auto;
+  border-radius: 5px;
   background: #fff;
   padding: 1rem;
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   align-content: center;
   min-height: 100vh;
   margin: 3rem 2rem;
 }
+
+/* ------- pagination -------- */
+.page-div{
+  margin: 25px auto -10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pages{
+  list-style:none;
+  padding: 0;
+}
+
+.pages li{
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.pages li a{
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  padding: .5em  .75em;
+  margin: 0.2em;
+  background-color: rgba(0,0,0,0);
+  border-radius: 50%;
+  transition: .5s ease;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+.pages li a:hover{
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pages li a:active{
+  color: #fff;
+  background-color: rgba(231, 76, 68, 1);
+}
+
+.pages li.active a{
+  color: #fff;
+  background-color: rgba(231, 76, 68, 1);
+  box-shadow: 0 1px 5px rgba(0,0,0,.6);
+}
+
+.pages li.disable{
+  opacity: .5;
+  pointer-events: none !important;
+}
+
+   /*--------- Footer --------- */
+.footer-div{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background: #1C1C1C;
+  padding: 20px 0px;
+}
+
+.footer-menu-one, .footer-menu-two{
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.footer-menu-one ul, .footer-menu-two ul{
+  text-align: center;
+}
+
+.footer-menu-one ul li{
+  display: inline-block;
+  margin: 5px 20px;
+}
+
+.footer-menu-one ul li a,
+.footer-menu-two ul li a,
+ .footer-web{
+  color: #aaa;
+  letter-spacing: 1px;
+}
+
+.footer-menu-two ul li{
+  display: inline-block;
+  margin: 5px 3px;
+}
+
+ .footer-menu-two ul li a{
+   font-size: 13px;
+   font-weight: 100;
+ }
+
+ .footer-web:hover{
+   color: #fdfdfd;
+ }
